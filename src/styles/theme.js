@@ -1,13 +1,8 @@
 const theme = {
-    colors: {
-    //   lightGrey: '#E2E2E2',
-    //   blue: '#1654F2',
-    //   black: '#000',
-    //   marine: '#718096',
-    //   iris: '#5D5FEF',
-    //   pink: '#EF5DA8',
-    //   fuchsia: '#FCDDEC',
-    },
-  };
-  
-  export default theme;
+  colors: {
+    blue: 'rgba(44, 130, 201, 1)',
+    transparentBlue: 'rgba(44, 130, 201, 0.8)'
+  }
+};
+
+export default theme;

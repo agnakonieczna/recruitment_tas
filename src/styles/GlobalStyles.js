@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
 
 const GlobalStyle = createGlobalStyle`
-${normalize}
+${normalize};
 
 * {
     padding: 0;
@@ -16,27 +16,11 @@ html {
 
   body {
     font-size: 1rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Yaldevi', sans-serif;
   }
 
-  h2 {
-    font-size: 2rem;
-
-    @media (min-width: 768px) {
-      font-size: 3rem;
-    }
-  }
-
-  p {
-    font-size: 1.4rem;
-
-    @media (min-width: 768px) {
-      font-size: 2rem;
-    }
-
-    @media (min-width: 1024px) {
-      font-size: 2.6rem;
-    }
+  h1, h2 {
+    text-transform: uppercase;
   }
 
   ul {
@@ -49,6 +33,7 @@ html {
 
   img {
     width: 100%;
+    height: 100%;
   }
 `;
 
