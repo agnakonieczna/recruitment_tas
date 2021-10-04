@@ -7,21 +7,19 @@ const SingleHouse = () => {
 
   useEffect(() => {
     fetch(`http://mobile-reality-backend.sadek.usermd.net/houses/${id}`)
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error(res.error);
-        }
-        return res;
-      })
-      .then((data) => setSingleHouse(data.result));
+      .then((res) => res.json())
+      .then((data) => setSingleHouse(data.result))
+      .catch((err) => console.log(err));
   }, [id]);
 
   return (
-    <section>
-      <h2>{singleHouse.address}</h2>
-      <p>{singleHouse.description}</p>
-      <p>{singleHouse.floorsNumber}</p>
-    </section>
+    singleHouse ? (
+      <section>
+        <h2>{singleHouse.address}</h2>
+        <p>{singleHouse.description}</p>
+        <p>{singleHouse.floorsNumber}</p>
+      </section>
+    ) : <p>Nie znaleziono domku</p>
   );
 };
 

@@ -18,7 +18,7 @@ function App() {
         if (!res.ok) {
           throw new Error(res.error);
         }
-        return res;
+        return res.json();
       })
       .then((data) => setData(data.results))
       .catch((err) => console.log(err));
